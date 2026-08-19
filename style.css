@@ -1,4 +1,22 @@
-/* GŁÓWNE ZDJĘCIE */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1d2822;
+    background: #f7f6f1;
+}
+
+
+/* =========================
+   DUŻE ZDJĘCIE
+========================= */
 
 .hero {
     position: relative;
@@ -14,7 +32,7 @@
 }
 
 
-/* LOGO + MENU NA ZDJĘCIU */
+/* LOGO + MENU */
 
 .topbar {
     position: relative;
@@ -30,7 +48,7 @@
 }
 
 
-/* MAŁE LOGO W LEWYM ROGU */
+/* MAŁE LOGO */
 
 .logo {
     width: 95px;
@@ -65,7 +83,7 @@ nav a {
 }
 
 
-/* DELIKATNE PRZYCIEMNIENIE ZDJĘCIA */
+/* PRZYCIEMNIENIE ZDJĘCIA */
 
 .hero-overlay {
     position: absolute;
@@ -80,7 +98,7 @@ nav a {
 }
 
 
-/* TEKST */
+/* TEKST NA ZDJĘCIU */
 
 .hero-content {
     position: absolute;
@@ -95,9 +113,7 @@ nav a {
 .hero-label {
     font-size: 13px;
     font-weight: bold;
-
     letter-spacing: 3px;
-
     margin-bottom: 20px;
 }
 
@@ -105,7 +121,6 @@ nav a {
     margin: 0 0 35px;
 
     font-family: Georgia, "Times New Roman", serif;
-
     font-size: clamp(42px, 5vw, 72px);
 
     line-height: 1.08;
@@ -113,7 +128,171 @@ nav a {
 }
 
 
-/* TELEFONY */
+/* =========================
+   PRZYCISKI
+========================= */
+
+.button {
+    display: inline-block;
+
+    padding: 15px 27px;
+
+    color: white;
+    background: #496451;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+
+    transition: 0.2s;
+}
+
+.button:hover {
+    background: #314a3b;
+}
+
+
+/* =========================
+   ZWYKŁE SEKCJE
+========================= */
+
+.content-section {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 110px 40px;
+}
+
+.section-label {
+    color: #647a69;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+h2 {
+    max-width: 800px;
+
+    margin: 0 0 30px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    font-weight: normal;
+    line-height: 1.15;
+
+    color: #22352a;
+}
+
+.content-section > p:not(.section-label) {
+    max-width: 750px;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    color: #4a554f;
+}
+
+
+/* =========================
+   OFERTA
+========================= */
+
+.services {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+
+    margin-top: 60px;
+}
+
+.service {
+    border-top: 1px solid #8c9c92;
+
+    padding: 30px 10px 20px 0;
+}
+
+.service h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px;
+    font-weight: normal;
+
+    color: #253a2e;
+}
+
+.service p {
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: #5b655f;
+}
+
+
+/* =========================
+   KONTAKT
+========================= */
+
+.contact-section {
+    padding: 100px 40px;
+
+    background: #21382b;
+    color: white;
+
+    text-align: center;
+}
+
+.contact-section .section-label {
+    color: #b7c4ba;
+}
+
+.contact-section h2 {
+    margin: 0 auto 25px;
+
+    color: white;
+}
+
+.contact-section p:not(.section-label) {
+    font-size: 18px;
+
+    margin-bottom: 35px;
+}
+
+.button-light {
+    background: white;
+    color: #22382c;
+}
+
+.button-light:hover {
+    background: #e6e9e4;
+}
+
+
+/* =========================
+   STOPKA
+========================= */
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    background: #17281f;
+    color: #b8c2bb;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   TELEFONY
+========================= */
 
 @media (max-width: 800px) {
 
@@ -143,6 +322,22 @@ nav a {
         left: 25px;
         right: 25px;
         bottom: 10%;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .content-section {
+        padding: 75px 25px;
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
     }
 
 }
