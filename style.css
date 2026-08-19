@@ -2,52 +2,331 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    color: #26352e;
-    background: #f5f7f5;
+    color: #1d2822;
+    background: #f7f6f1;
 }
 
-header {
-    padding: 80px 20px;
-    text-align: center;
-    background: #264d3c;
+
+/* GÓRNE MENU */
+
+.topbar {
+    background: white;
+    width: 100%;
+}
+
+.topbar-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    min-height: 105px;
+    padding: 10px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 190px;
+    height: 80px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+nav {
+    display: flex;
+    gap: 38px;
+}
+
+nav a {
+    color: #1c2c24;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #617867;
+}
+
+
+/* DUŻE ZDJĘCIE */
+
+.hero {
+    position: relative;
+
+    min-height: 690px;
+
+    display: flex;
+    align-items: center;
+
+    background-image: url("images/hero.png");
+    background-size: cover;
+    background-position: center center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(15, 26, 20, 0.78) 0%,
+        rgba(15, 26, 20, 0.50) 45%,
+        rgba(15, 26, 20, 0.06) 80%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1300px;
+
+    margin: 0 auto;
+    padding: 80px 40px;
+
     color: white;
 }
 
-header h1 {
-    font-size: 48px;
-    margin: 0;
+.hero-label {
+    margin-bottom: 20px;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
 }
 
-header p {
-    font-size: 20px;
+.hero h1 {
+    max-width: 800px;
+
+    margin: 0 0 25px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(48px, 6vw, 78px);
+    font-weight: normal;
+    line-height: 1.05;
 }
 
-main {
-    max-width: 1000px;
-    margin: auto;
-    padding: 50px 25px;
+.hero-description {
+    max-width: 600px;
+
+    margin-bottom: 35px;
+
+    font-size: 19px;
+    line-height: 1.7;
 }
 
-section {
-    margin-bottom: 60px;
+
+/* PRZYCISKI */
+
+.button {
+    display: inline-block;
+
+    padding: 15px 27px;
+
+    color: white;
+    background: #496451;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+
+    transition: 0.2s;
+}
+
+.button:hover {
+    background: #314a3b;
+}
+
+
+/* SEKCJE */
+
+.content-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 110px 40px;
+}
+
+.section-label {
+    color: #647a69;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
 }
 
 h2 {
-    color: #315b48;
-    font-size: 32px;
+    max-width: 800px;
+
+    margin: 0 0 30px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    font-weight: normal;
+    line-height: 1.15;
+
+    color: #22352a;
 }
 
-li {
-    margin-bottom: 8px;
+.content-section > p:not(.section-label) {
+    max-width: 750px;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    color: #4a554f;
 }
+
+
+/* OFERTA */
+
+.services {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+
+    margin-top: 60px;
+}
+
+.service {
+    border-top: 1px solid #8c9c92;
+
+    padding: 30px 10px 20px 0;
+}
+
+.service h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px;
+    font-weight: normal;
+
+    color: #253a2e;
+}
+
+.service p {
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: #5b655f;
+}
+
+
+/* KONTAKT */
+
+.contact-section {
+    padding: 100px 40px;
+
+    background: #21382b;
+    color: white;
+
+    text-align: center;
+}
+
+.contact-section .section-label {
+    color: #b7c4ba;
+}
+
+.contact-section h2 {
+    margin: 0 auto 25px;
+
+    color: white;
+}
+
+.contact-section p:not(.section-label) {
+    font-size: 18px;
+
+    margin-bottom: 35px;
+}
+
+.button-light {
+    background: white;
+    color: #22382c;
+}
+
+.button-light:hover {
+    background: #e6e9e4;
+}
+
+
+/* STOPKA */
 
 footer {
-    text-align: center;
     padding: 30px;
-    background: #1d382c;
-    color: white;
+
+    text-align: center;
+
+    background: #17281f;
+    color: #b8c2bb;
+
+    font-size: 13px;
+}
+
+
+/* TELEFONY */
+
+@media (max-width: 800px) {
+
+    .topbar-inner {
+        flex-direction: column;
+
+        padding: 15px 20px;
+    }
+
+    .logo {
+        width: 170px;
+    }
+
+    nav {
+        gap: 15px;
+
+        flex-wrap: wrap;
+        justify-content: center;
+
+        padding-bottom: 15px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 620px;
+    }
+
+    .hero-content {
+        padding: 60px 25px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .content-section {
+        padding: 80px 25px;
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+
 }
