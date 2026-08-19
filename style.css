@@ -341,3 +341,66 @@ footer {
     }
 
 }
+
+/* =========================
+   CIEMNE TŁO STRONY
+========================= */
+
+body {
+    background: #171918;
+    color: #ffffff;
+}
+
+.content-section {
+    background: #171918;
+}
+
+.content-section h2 {
+    color: #ffffff;
+}
+
+.content-section > p:not(.section-label) {
+    color: #e2e5e3;
+}
+
+.section-label {
+    color: #aebbb3;
+}
+
+
+/* OFERTA NA CIEMNYM TLE */
+
+.service {
+    border-top-color: #555d58;
+}
+
+.service h3 {
+    color: #ffffff;
+}
+
+.service p {
+    color: #d2d7d4;
+}
+
+
+/* =========================
+   LEPIEJ WIDOCZNE MENU
+========================= */
+
+nav {
+    background: rgba(15, 18, 16, 0.68);
+    padding: 11px 16px;
+    border-radius: 4px;
+    backdrop-filter: blur(5px);
+}
+
+nav a {
+    color: #ffffff;
+    text-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.9),
+        0 0 8px rgba(0, 0, 0, 0.55);
+}
+
+nav a:hover {
+    color: #d5ddd8;
+}
